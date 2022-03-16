@@ -1,0 +1,3 @@
+name: cs2800-challenge
+depend: standard-library
+include: *

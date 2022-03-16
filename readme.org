@@ -1,0 +1,11 @@
+* Nix
+If you have nix with flakes enabled, running =nix develop= in this directory will give you a shell with an Agda + stdlib.
+
+* Not Nix
+Install [[https://agda.readthedocs.io/en/v2.6.2.1/getting-started/installation.html][Agda]] v2.6.1 and make sure to clone the standard library v1.7.1.
+
+* Standard Library
+For Nix or Not Nix you will probably have to follow the [[https://agda.readthedocs.io/en/v2.6.2.1/tools/package-system.html?highlight=standard%20library][instructions]] to tell the Agda executable to use the standard library. I don't really understand why this bit, but the =~/.agda/defaults= file just works. Even though it shouldn't be necessary given this project's configuration.
+
+* Run
+Then =agda cs2800/BoolFm.agda=, run from the directory above this one, will show that there are no issues in the file. Then you can inspect it and see what I've done!
