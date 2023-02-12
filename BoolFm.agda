@@ -24,6 +24,7 @@ data BoolFm1 : Set where
   equal : BoolFm1 → BoolFm1 → BoolFm1
   xor : BoolFm1 → BoolFm1 → BoolFm1
   nor : BoolFm1 → BoolFm1 → BoolFm1
+  nand : BoolFm1 → BoolFm1 → BoolFm1
 
 data NorFm : Set where
   bool : Bool → NorFm
@@ -124,6 +125,7 @@ B1Eval (implies p q) a = impliesEval B1Eval p q a
 B1Eval (equal p q) a = equalEval B1Eval p q a
 B1Eval (xor p q) a = xorEval B1Eval p q a
 B1Eval (nor p q) a = norEval B1Eval p q a
+B1Eval (nand p q) a = nandEval B1Eval p q a
 
 {-# TERMINATING #-}
 NorEval : NorFm → assignment → Bool
